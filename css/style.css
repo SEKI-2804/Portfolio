@@ -541,8 +541,15 @@ a.btn-malformation:hover {
   }
 
   /* ヘッダー */
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+  }
+  
   .header-logo {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .header-nav-item:not(:last-child) {
@@ -552,7 +559,10 @@ a.btn-malformation:hover {
   .header-nav-item a {
     font-size: 12px;
   }
-  
+
+  #nav {
+    padding: 15px 10px;
+  }
   
   /* メインビジュアル */
   .main-visual-img {
