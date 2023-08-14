@@ -573,6 +573,21 @@ a.btn-malformation:hover {
     height: 100px;
     background-image: url(../img/sp_mv_sub.png);
   }
+  .main-visual h1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+  
+    letter-spacing: 0.3em;
+    font-family:  Hiragino Sans;
+    font-size: 20px;
+    font-weight: bold;
+  }
 
   /* プロフィール */
   .profile {
