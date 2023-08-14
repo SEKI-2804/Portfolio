@@ -171,12 +171,33 @@ li {
   padding: 5px 0;
   letter-spacing: .1em;
   color: #fff;
+
+  position: relative;
 }
 
 .header-nav-item a:hover {
   opacity: .8;
 }
 
+.header-nav-item a:after {
+  content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 90%;
+    height: 2px;
+    background:#ffffff;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+.header-nav-item a:hover::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
 
 /*--------------------------------
  メインビジュアル
@@ -545,7 +566,7 @@ a.btn-malformation:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 10px;
+    padding: 6px 10px;
   }
   
   .header-logo {
