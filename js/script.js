@@ -61,12 +61,6 @@ $(function () {
     });
   });
 
-  // ローディング
-  window.onload = function () {
-    const cube = document.getElementById('loading');
-    cube.classList.add('loaded');
-  }
-
   // //fadeup
   // // 動きのきっかけとなるアニメーションの名前を定義
   // function fadeAnime() {
@@ -91,4 +85,10 @@ $(function () {
   //   fadeAnime();/* アニメーション用の関数を呼ぶ*/
   // });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 });
+
+// ローディング
+  window.onload = function () {
+    const cube = document.getElementById('loading');
+    cube.classList.add('loaded');
+  }
 
