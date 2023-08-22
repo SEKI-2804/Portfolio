@@ -142,7 +142,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 10px 30px;
 }
 
 .header-logo {
@@ -155,6 +155,11 @@ li {
 
 .header-logo a {
   color: #fff;
+}
+
+.header-logo img {
+  width: 70px;
+  height: 70px;
 }
 
 .header-nav-list {
@@ -566,7 +571,7 @@ a.btn-malformation:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 10px;
+    padding: 5px 10px;
   }
   
   .header-logo {
