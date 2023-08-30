@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: "Lato", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
@@ -55,7 +55,7 @@ li {
   visibility: hidden;
 }
 
-#wrapper{
+#wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -65,13 +65,14 @@ li {
 .path {
   stroke-dasharray: 2000;
   stroke-dashoffset: 0;
-  animation: dash 5s linear  infinite;
+  animation: dash 5s linear infinite;
 }
 
 @keyframes dash {
   0% {
     stroke-dashoffset: 2000;
   }
+
   90% {
     stroke-dashoffset: 0;
   }
@@ -80,13 +81,14 @@ li {
 .path2 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash2 5s linear  infinite;
+  animation: dash2 5s linear infinite;
 }
 
 @keyframes dash2 {
   60% {
     stroke-dashoffset: 1000;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -186,22 +188,25 @@ li {
 
 .header-nav-item a:after {
   content: '';
-    /*絶対配置で線の位置を決める*/
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    /*線の形状*/
-    width: 90%;
-    height: 2px;
-    background:#ffffff;
-    /*アニメーションの指定*/
-    transition: all .3s;
-    transform: scale(0, 1);/*X方向0、Y方向1*/
-    transform-origin: center top;/*上部中央基点*/
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /*線の形状*/
+  width: 90%;
+  height: 2px;
+  background: #ffffff;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  transform-origin: center top;
+  /*上部中央基点*/
 }
 
 .header-nav-item a:hover::after {
-  transform: scale(1, 1);/*X方向にスケール拡大*/
+  transform: scale(1, 1);
+  /*X方向にスケール拡大*/
 }
 
 /*--------------------------------
@@ -215,14 +220,14 @@ li {
   position: absolute;
   top: 50%;
   left: 35%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
 
   letter-spacing: 0.3em;
-  font-family:  Hiragino Sans;
+  font-family: Hiragino Sans;
   font-size: 40px;
   font-weight: bold;
 }
@@ -305,7 +310,7 @@ li {
   border: 1px solid #e6e6e6;
   /* height: 280px;
   width: 400px;*/
-} 
+}
 
 .works-name {
   font-size: 12px;
@@ -319,13 +324,16 @@ li {
 
 .fuwa {
   display: inline-block;
-  transition-duration: 0.4s;/*変化の時間*/
+  transition-duration: 0.4s;
+  /*変化の時間*/
   box-shadow: 0px 4px 15px -5px rgba(85, 85, 85, 0.75);
 }
+
 .fuwa:hover {
   transform: translateY(-6px);
   box-shadow: 0px 8px 18px -5px rgba(85, 85, 85, 0.75);
 }
+
 .fuwa img {
   vertical-align: bottom;
 }
@@ -360,7 +368,7 @@ li {
 
 .skill-name {
   margin-bottom: 3px;
-  
+
 }
 
 /*--------------------------------
@@ -388,6 +396,7 @@ li {
   margin-top: 10px;
   text-align: center;
 }
+
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -396,7 +405,7 @@ li {
   padding: 10px;
   cursor: pointer;
   text-align: center;
-  background-color: rgb(82,89,108);
+  background-color: rgb(82, 89, 108);
   color: #fff;
 }
 
@@ -460,7 +469,8 @@ li {
 }
 
 .home-link {
-  text-align: center;;
+  text-align: center;
+  ;
 }
 
 *,
@@ -573,7 +583,7 @@ a.btn-malformation:hover {
     justify-content: space-between;
     padding: 5px 10px;
   }
-  
+
   .header-logo {
     font-size: 13px;
   }
@@ -589,28 +599,148 @@ a.btn-malformation:hover {
   #nav {
     padding: 15px 10px;
   }
-  
+
+  #nav {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: auto;
+    /*ナビの高さ*/
+    background: #3E7597;
+    /*動き*/
+    transition: all 0.3s;
+  }
+
+  #nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  #nav.panelactive {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #nav ul {
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #nav.panelactive ul {
+    display: block;
+  }
+
+  #nav li {
+    list-style: none;
+    text-align: center;
+  }
+
+  #nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+  /*========= ボタンのためのCSS ===============*/
+  .openbtn {
+    position: sticky;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*×に変化*/
+  .openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+
+  .openbtn.active-btn span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn.active-btn span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active-btn span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+  .slash {
+    opacity: 0;
+  }
+
   /* メインビジュアル */
   .main-visual-img {
     height: 60vh;
     background-image: url(../img/sp_mv.png);
   }
+
   .sub-main-visual-img {
     height: 100px;
-    background-image: url(../img/sp_mv_sub.png);
+    background-image: url(../img/sp_mv_sub1.png);
   }
+
   .main-visual h1 {
     position: absolute;
     top: 50%;
     left: 40%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
-  
+
     letter-spacing: 0.3em;
-    font-family:  Hiragino Sans;
+    font-family: Hiragino Sans;
     font-size: 30px;
     font-weight: bold;
   }
@@ -619,9 +749,11 @@ a.btn-malformation:hover {
   .profile {
     padding: 30px 0;
   }
+
   .profile-title {
     font-size: 20px;
   }
+
   .icon img {
     height: 160px;
     width: 160px;
