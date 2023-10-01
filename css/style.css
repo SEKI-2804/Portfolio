@@ -1,9 +1,13 @@
 body {
-  font-family: "Lato", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Dela Gothic One', cursive;
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
   color: #333;
+}
+
+p {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 a {
@@ -12,9 +16,6 @@ a {
   color: #265dbd;
 }
 
-p {
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-}
 
 img {
   max-width: 100%;
@@ -138,6 +139,9 @@ li {
 
 .header.active {
   background-color: #010B22;
+  height: 90px;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
 }
 
 .header-inner {
@@ -182,32 +186,28 @@ li {
   position: relative;
 }
 
+/* アンダーバーアニメーション */
 .header-nav-item a:hover {
-  opacity: .8;
+  opacity: .5;
 }
-
+/* アンダーバーアニメーション */
+/*
 .header-nav-item a:after {
   content: '';
-  /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: 0;
   left: 10%;
-  /*線の形状*/
   width: 90%;
-  height: 2px;
+  height: 4px;
   background: #ffffff;
-  /*アニメーションの指定*/
   transition: all .3s;
   transform: scale(0, 1);
-  /*X方向0、Y方向1*/
   transform-origin: center top;
-  /*上部中央基点*/
 }
 
 .header-nav-item a:hover::after {
   transform: scale(1, 1);
-  /*X方向にスケール拡大*/
-}
+} */
 
 /*--------------------------------
  メインビジュアル
@@ -227,7 +227,7 @@ li {
   padding: 0;
 
   letter-spacing: 0.3em;
-  font-family: Hiragino Sans;
+  font-family: 'Dela Gothic One', cursive;
   font-size: 40px;
   font-weight: bold;
 }
@@ -256,6 +256,7 @@ li {
 }
 
 .profile-title {
+  font-weight: 400;
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
@@ -375,6 +376,7 @@ li {
  Contact
 ---------------------------------*/
 .contact-list {
+  font-family: 'Noto Sans JP', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -417,7 +419,7 @@ li {
  フッター
 ---------------------------------*/
 .footer {
-  padding: 30px;
+  padding-bottom: 30px;
   background-color: #010B22;
 }
 
@@ -425,6 +427,11 @@ li {
   font-size: 10px;
   text-align: center;
   color: #fff;
+}
+
+.wave-back {
+  padding: 40px;
+  background-color: rgb(82, 89, 108);
 }
 
 /*--------------------------------
@@ -726,7 +733,7 @@ a.btn-malformation:hover {
 
   .sub-main-visual-img {
     height: 100px;
-    background-image: url(../img/sp_mv_sub.png);
+    background-image: url(../img/sp_mv_sub1.png);
   }
 
   .main-visual h1 {
@@ -740,7 +747,7 @@ a.btn-malformation:hover {
     padding: 0;
 
     letter-spacing: 0.3em;
-    font-family: Hiragino Sans;
+    font-family: 'Dela Gothic One', cursive;
     font-size: 30px;
     font-weight: bold;
   }
