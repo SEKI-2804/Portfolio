@@ -430,6 +430,7 @@ li {
   transition: 0.3s;
   text-align: center;
   margin-left: 5px;
+  color: #333;
 }
 
 .social-btn:hover {
