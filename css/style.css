@@ -234,7 +234,7 @@ li {
 
 .main-visual-img {
   height: 700px;
-  background-image: url(../img/mv.png);
+  background-image: url(../img/mv.gif);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -424,7 +424,7 @@ li {
   width: 24px;
 }
 
-.social-btn span {
+.social-btn a {
   width: 0px;
   overflow: hidden;
   transition: 0.3s;
@@ -437,7 +437,7 @@ li {
   border-radius: 5px;
 }
 
-.social-btn:hover span {
+.social-btn:hover a {
   padding: 2px;
   width: 200px;
 }
@@ -775,7 +775,7 @@ a.btn-malformation:hover {
   /* メインビジュアル */
   .main-visual-img {
     height: 60vh;
-    background-image: url(../img/sp_mv.png);
+    background-image: url(../img/sp_mv.gif);
   }
 
   .sub-main-visual-img {
