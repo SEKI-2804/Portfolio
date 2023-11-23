@@ -496,8 +496,10 @@ li {
 }
 
 .article-title {
+  font-family: 'M PLUS 1', sans-serif;
   margin-bottom: 20px;
   text-align: center;
+  letter-spacing: 0.3rem;
 }
 
 .article-img {
@@ -511,8 +513,10 @@ li {
 }
 
 .article-info-title {
+  font-family: 'M PLUS 1', sans-serif;
   font-size: 15px;
   margin-bottom: 8px;
+  letter-spacing: 0.1rem;
 }
 
 .article-body img {
